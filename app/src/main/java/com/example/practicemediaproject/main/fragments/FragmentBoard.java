@@ -1,4 +1,4 @@
-package com.example.practicemediaproject;
+package com.example.practicemediaproject.main.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.practicemediaproject.R;
 
 public class FragmentBoard extends Fragment {
     ViewGroup viewGroup;

@@ -2,36 +2,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/tab1"
+        android:id="@+id/item_chat_main"
         android:checked="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="홈"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/tab2"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_comment_24"
-        android:title="게시판"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/tab3"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_view_list_24"
-        android:title="시간표"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="chat"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/tab4"
+        android:id="@+id/item_board_main"
+        android:checked="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_notifications_24"
-        android:title="알림"
+        android:icon="@drawable/ic_baseline_board_24"
+        android:title="board"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/tab5"
+        android:id="@+id/item_card_news_main"
+        android:checked="true"
         android:enabled="true"
-        android:icon="@drawable/campus_pick"
-        android:title="캠퍼스픽"
+        android:icon="@drawable/ic_baseline_card_news_24"
+        android:title="card news"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_settings_main"
+        android:checked="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="settings"
+        app:showAsAction="always" />
+
 </menu>

@@ -11,6 +11,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.practicemediaproject.main.MainActivity;
+
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText et_sign_up_id;
@@ -172,6 +174,10 @@ public class SignUpActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_sign_up_sign_up:
+                intent = new Intent(SignUpActivity.this, MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                finish();
                 break;
         }
     }

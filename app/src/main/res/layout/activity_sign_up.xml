@@ -358,6 +358,7 @@
     <!--    Sign Up Button-->
     <Button
         android:id="@+id/btn_sign_up_sign_up"
+        android:onClick="customOnClick"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
