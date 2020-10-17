@@ -3,39 +3,39 @@
 
     <item android:id="@+id/menuMain"
         android:icon="@drawable/ic_university_24"
-        android:title="아주대학교 소식" />
+        android:title="@string/univ_news" />
 
     <item android:id="@+id/menuNotifications"
         android:icon="@drawable/notifications"
-        android:title="학과 공지" />
+        android:title="@string/dept_notification" />
 
-    <item android:id="@+id/menuCollection"
+    <item android:id="@+id/menuScrap"
         android:icon="@drawable/collection"
-        android:title="스크랩" />
+        android:title="@string/scrap" />
 
     <item android:id="@+id/menuMessage"
         android:icon="@drawable/message"
-        android:title="쪽지함" />
+        android:title="@string/message" />
 
 <!--    <item android:id="@+id/menuOrders"-->
 <!--        android:icon="@drawable/orders"-->
 <!--        android:title="@string/orders" />-->
 
-    <item android:title="기타">
+    <item android:title="@string/others">
 
         <menu>
 
             <item android:id="@+id/menuSettings"
                 android:icon="@drawable/settings"
-                android:title="설정" />
+                android:title="@string/settings" />
 
             <item android:id="@+id/menuSupport"
                 android:icon="@drawable/support"
-                android:title="학생 지원" />
+                android:title="@string/support" />
 
-            <item android:id="@+id/menuAboutUs"
+            <item android:id="@+id/menuAppInfo"
                 android:icon="@drawable/about"
-                android:title="앱 정보" />
+                android:title="@string/app_info" />
 
         </menu>
 

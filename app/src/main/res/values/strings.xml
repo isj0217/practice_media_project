@@ -8,13 +8,18 @@
     <string name="collection">Collection</string>
     <string name="inbox">InBox</string>
     <string name="orders">Orders</string>
-    <string name="others">Others</string>
-    <string name="settings">Settings</string>
-    <string name="support">Support</string>
+    <string name="others">기타</string>
+    <string name="settings">설정</string>
+    <string name="support">학생 지원</string>
     <string name="about_us">About Us</string>
     <string name="user_nickname">망포동아붕이</string>
     <string name="dept_year">미디어학과 15학번</string>
     <string name="main">Main</string>
+    <string name="univ_news">아주대학교 소식</string>
+    <string name="dept_notification">학과 공지</string>
+    <string name="scrap">스크랩</string>
+    <string name="message">쪽지함</string>
+    <string name="app_info">앱 정보</string>
 
 
 </resources>
