@@ -16,8 +16,7 @@ public class SignInActivity extends AppCompatActivity {
     private EditText et_sign_in_id;
     private EditText et_sign_in_pw;
     private Button btn_sign_in_sign_in;
-    private Button btn_sign_in_find_id_or_pw;
-    private Button bnt_sign_in_sign_in;
+//    private Button btn_sign_in_find_id_or_pw;
     private Button btn_sign_in_sign_up;
 
     private Intent intent;
@@ -26,7 +25,7 @@ public class SignInActivity extends AppCompatActivity {
         et_sign_in_id = findViewById(R.id.et_sign_in_id);
         et_sign_in_pw = findViewById(R.id.et_sign_in_pw);
         btn_sign_in_sign_in = findViewById(R.id.btn_sign_in_sign_in);
-        btn_sign_in_find_id_or_pw = findViewById(R.id.btn_sign_in_find_id_or_pw);
+//        btn_sign_in_find_id_or_pw = findViewById(R.id.btn_sign_in_find_id_or_pw);
         btn_sign_in_sign_up = findViewById(R.id.btn_sign_in_sign_up);
     }
 
@@ -44,11 +43,11 @@ public class SignInActivity extends AppCompatActivity {
                 // 1. 아이디랑 비밀번호 EditText를 읽어와서 비어있지만 않다면 그냥 MainActivity로 이동
 
                 if (et_sign_in_id.getText().toString().equals("") && et_sign_in_pw.getText().toString().equals("")){
-                    Toast.makeText(SignInActivity.this, "Input ID and PASSWORD", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "아이디와 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
                 } else if (et_sign_in_id.getText().toString().equals("")){
-                    Toast.makeText(SignInActivity.this, "Input ID", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "아이디를 입력하세요", Toast.LENGTH_SHORT).show();
                 } else if (et_sign_in_pw.getText().toString().equals("")){
-                    Toast.makeText(SignInActivity.this, "Input PW", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
                 } else{
                     intent = new Intent(SignInActivity.this, MainActivity.class);
                     startActivity(intent);

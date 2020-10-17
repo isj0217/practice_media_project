@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments;
+package com.example.practicemediaproject.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,13 +11,21 @@ import androidx.fragment.app.Fragment;
 
 import com.example.practicemediaproject.R;
 
-public class FragmentChat extends Fragment {
-    ViewGroup viewGroup;
+public class FragAgoraRestaurant extends Fragment {
+
+    private View view;
+
+    public static FragAgoraRestaurant newInstance() {
+        FragAgoraRestaurant fragAgoraRestaurant = new FragAgoraRestaurant();
+        return fragAgoraRestaurant;
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.frag_chat, container, false);
-        return viewGroup;
+        view = inflater.inflate(R.layout.frag_agora_restaurant, container, false);
+
+        return view;
     }
+    
 }

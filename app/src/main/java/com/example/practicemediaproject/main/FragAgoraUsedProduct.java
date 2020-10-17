@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments;
+package com.example.practicemediaproject.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,13 +11,21 @@ import androidx.fragment.app.Fragment;
 
 import com.example.practicemediaproject.R;
 
-public class FragmentCardNews extends Fragment {
-    ViewGroup viewGroup;
+public class FragAgoraUsedProduct extends Fragment {
+
+    private View view;
+
+    public static FragAgoraUsedProduct newInstance() {
+        FragAgoraUsedProduct fragAgoraUsedProduct = new FragAgoraUsedProduct();
+        return fragAgoraUsedProduct;
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.frag_card_news, container, false);
-        return viewGroup;
+        view = inflater.inflate(R.layout.frag_agora_used_product, container, false);
+
+        return view;
     }
+    
 }

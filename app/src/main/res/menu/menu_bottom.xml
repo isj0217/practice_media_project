@@ -2,35 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/item_chat_main"
+        android:id="@+id/item_home_main"
         android:checked="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_chat_24"
-        android:title="chat"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="홈"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/item_board_main"
+        android:id="@+id/item_agora_main"
         android:checked="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_board_24"
-        android:title="board"
+        android:icon="@drawable/ic_baseline_people_alt_24"
+        android:title="아고라"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/item_card_news_main"
+        android:id="@+id/item_message_main"
         android:checked="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_card_news_24"
-        android:title="card news"
-        app:showAsAction="always" />
-
-    <item
-        android:id="@+id/item_settings_main"
-        android:checked="true"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="settings"
+        android:icon="@drawable/ic_baseline_textsms_24"
+        android:title="쪽지"
         app:showAsAction="always" />
 
 </menu>
