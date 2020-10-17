@@ -47,7 +47,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "학과별 게시판";
+                return "학과 게시판";
             case 1:
                 return "아주 맛집";
             case 2:

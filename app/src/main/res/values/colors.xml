@@ -11,4 +11,7 @@
     <color name="black">#000000</color>
     <color name="grey">#888888</color>
     <color name="lighter_grey">#DDDDDD</color>
+    <color name="green">#32CD32</color>
+
+
 </resources>
