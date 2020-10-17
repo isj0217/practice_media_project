@@ -6,6 +6,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora.FragAgoraClub;
+import com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora.FragAgoraDepartment;
+import com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora.FragAgoraRestaurant;
+import com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora.FragAgoraUsedProduct;
+
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     public ViewPagerAdapter(@NonNull FragmentManager fm) {

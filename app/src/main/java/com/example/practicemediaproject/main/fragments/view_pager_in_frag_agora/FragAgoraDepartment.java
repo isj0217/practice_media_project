@@ -1,12 +1,9 @@
-package com.example.practicemediaproject.main;
+package com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

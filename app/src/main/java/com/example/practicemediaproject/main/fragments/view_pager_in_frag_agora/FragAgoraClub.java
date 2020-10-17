@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main;
+package com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/menuProfile">
+    app:startDestination="@id/menuMain">
 
     <fragment
-        android:id="@+id/menuProfile"
-        android:name="com.example.practicemediaproject.ProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/menuMain"
+        android:name="com.example.practicemediaproject.drawer.MainFragment"
+        android:label="아주대학교 소식"
+        tools:layout="@layout/frag_home_frag_univ_news" />
     <fragment
         android:id="@+id/menuNotifications"
-        android:name="com.example.practicemediaproject.NotificationsFragment"
-        android:label="Notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.example.practicemediaproject.drawer.NotificationsFragment"
+        android:label="학과 공지"
+        tools:layout="@layout/frag_home_frag_dept_notifications" />
     <fragment
         android:id="@+id/menuSettings"
-        android:name="com.example.practicemediaproject.SettingsFragment"
-        android:label="Settings"
-        tools:layout="@layout/fragment_settings" />
+        android:name="com.example.practicemediaproject.drawer.SettingsFragment"
+        android:label="설정"
+        tools:layout="@layout/frag_home_frag_settings" />
 </navigation>

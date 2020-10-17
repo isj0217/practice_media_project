@@ -28,9 +28,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="@string/jackson"
+        android:text="@string/user_nickname"
         android:textColor="@color/blue_app_name"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/viewSupporter"
         app:layout_constraintStart_toEndOf="@+id/imageProfile" />
@@ -39,9 +39,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="@string/verified"
+        android:text="@string/dept_year"
         android:textColor="@color/green"
-        android:textSize="16sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/imageProfile"
         app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
 

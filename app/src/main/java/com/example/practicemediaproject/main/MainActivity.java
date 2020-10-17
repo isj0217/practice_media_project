@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_main, fragmentAgora).commitAllowingStateLoss();
                         return true;
                     }
-                    case R.id.item_message_main: {
+                    case R.id.item_chat_main: {
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_main, fragmentMessage).commitAllowingStateLoss();
                         return true;
                     }

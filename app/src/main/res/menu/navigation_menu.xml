@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/menuProfile"
-        android:icon="@drawable/profile"
-        android:title="@string/profile" />
+    <item android:id="@+id/menuMain"
+        android:icon="@drawable/ic_university_24"
+        android:title="아주대학교 소식" />
 
     <item android:id="@+id/menuNotifications"
         android:icon="@drawable/notifications"
-        android:title="@string/notifications" />
+        android:title="학과 공지" />
 
     <item android:id="@+id/menuCollection"
         android:icon="@drawable/collection"
-        android:title="@string/collection" />
+        android:title="스크랩" />
 
-    <item android:id="@+id/menuInBox"
-        android:icon="@drawable/inbox"
-        android:title="@string/inbox" />
+    <item android:id="@+id/menuMessage"
+        android:icon="@drawable/message"
+        android:title="쪽지함" />
 
-    <item android:id="@+id/menuOrders"
-        android:icon="@drawable/orders"
-        android:title="@string/orders" />
+<!--    <item android:id="@+id/menuOrders"-->
+<!--        android:icon="@drawable/orders"-->
+<!--        android:title="@string/orders" />-->
 
-    <item android:title="@string/others">
+    <item android:title="기타">
 
         <menu>
 
             <item android:id="@+id/menuSettings"
                 android:icon="@drawable/settings"
-                android:title="@string/settings" />
+                android:title="설정" />
 
             <item android:id="@+id/menuSupport"
                 android:icon="@drawable/support"
-                android:title="@string/support" />
+                android:title="학생 지원" />
 
             <item android:id="@+id/menuAboutUs"
                 android:icon="@drawable/about"
-                android:title="@string/about_us" />
+                android:title="앱 정보" />
 
         </menu>
 
