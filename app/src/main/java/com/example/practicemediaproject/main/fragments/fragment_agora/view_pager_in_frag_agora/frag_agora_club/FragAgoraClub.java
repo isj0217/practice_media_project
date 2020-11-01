@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora;
+package com.example.practicemediaproject.main.fragments.fragment_agora.view_pager_in_frag_agora.frag_agora_club;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,19 +11,19 @@ import androidx.fragment.app.Fragment;
 
 import com.example.practicemediaproject.R;
 
-public class FragAgoraUsedProduct extends Fragment {
+public class FragAgoraClub extends Fragment {
 
     private View view;
 
-    public static FragAgoraUsedProduct newInstance() {
-        FragAgoraUsedProduct fragAgoraUsedProduct = new FragAgoraUsedProduct();
-        return fragAgoraUsedProduct;
+    public static FragAgoraClub newInstance() {
+        FragAgoraClub fragAgoraClub = new FragAgoraClub();
+        return fragAgoraClub;
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.frag_agora_used_product, container, false);
+        view = inflater.inflate(R.layout.frag_agora_club, container, false);
 
         return view;
     }

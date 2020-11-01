@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments;
+package com.example.practicemediaproject.main.fragments.fragment_chat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.practicemediaproject.R;
 
-public class FragmentMessage extends Fragment {
+public class FragmentChat extends Fragment {
     ViewGroup viewGroup;
 
     @Nullable

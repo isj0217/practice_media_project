@@ -1,4 +1,4 @@
-package com.example.practicemediaproject;
+package com.example.practicemediaproject.sign_up;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.practicemediaproject.main.MainActivity;
+import com.example.practicemediaproject.R;
+import com.example.practicemediaproject.sign_in.SignInActivity;
 
 public class SignUpActivity extends AppCompatActivity {
 

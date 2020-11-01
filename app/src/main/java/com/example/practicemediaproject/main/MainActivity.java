@@ -8,9 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.practicemediaproject.R;
-import com.example.practicemediaproject.main.fragments.FragmentAgora;
-import com.example.practicemediaproject.main.fragments.FragmentHome;
-import com.example.practicemediaproject.main.fragments.FragmentMessage;
+import com.example.practicemediaproject.main.fragments.fragment_agora.FragmentAgora;
+import com.example.practicemediaproject.main.fragments.fragment_home.FragmentHome;
+import com.example.practicemediaproject.main.fragments.fragment_chat.FragmentChat;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     FragmentHome fragmentHome;
     FragmentAgora fragmentAgora;
-    FragmentMessage fragmentMessage;
+    FragmentChat fragmentChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // 4개의 프래그먼트 생성
         fragmentHome = new FragmentHome();
         fragmentAgora = new FragmentAgora();
-        fragmentMessage = new FragmentMessage();
+        fragmentChat = new FragmentChat();
 
         // 제일 처음 띄워줄 뷰를 세팅함
         // commitAllowingStateLoss();까지 해야함을 주의!
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                     case R.id.item_chat_main: {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_main, fragmentMessage).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_main, fragmentChat).commitAllowingStateLoss();
                         return true;
                     }
 

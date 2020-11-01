@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments;
+package com.example.practicemediaproject.main.fragments.fragment_agora;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.practicemediaproject.R;
-import com.example.practicemediaproject.main.ViewPagerAdapter;
+import com.example.practicemediaproject.main.fragments.fragment_agora.view_pager_in_frag_agora.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class FragmentAgora extends Fragment {

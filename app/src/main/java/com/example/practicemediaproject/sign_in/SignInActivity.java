@@ -1,4 +1,4 @@
-package com.example.practicemediaproject;
+package com.example.practicemediaproject.sign_in;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.practicemediaproject.R;
+import com.example.practicemediaproject.sign_up.SignUpActivity;
 import com.example.practicemediaproject.main.MainActivity;
 
 public class SignInActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments;
+package com.example.practicemediaproject.main.fragments.fragment_home;
 
 import android.app.Activity;
 import android.os.Bundle;

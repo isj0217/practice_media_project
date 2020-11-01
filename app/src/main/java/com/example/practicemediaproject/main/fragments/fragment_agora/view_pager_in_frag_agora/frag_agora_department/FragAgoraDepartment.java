@@ -1,4 +1,4 @@
-package com.example.practicemediaproject.main.fragments.view_pager_in_frag_agora;
+package com.example.practicemediaproject.main.fragments.fragment_agora.view_pager_in_frag_agora.frag_agora_department;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
