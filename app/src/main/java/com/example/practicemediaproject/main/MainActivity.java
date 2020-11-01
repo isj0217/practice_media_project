@@ -2,6 +2,7 @@ package com.example.practicemediaproject.main;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,9 @@ import com.example.practicemediaproject.main.fragments.FragmentMessage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private long mBackKeyPressedTime = 0;
+    private Toast mToast;
 
     BottomNavigationView bottom_navigation_view_main;
 
@@ -60,6 +64,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(System.currentTimeMillis() > mBackKeyPressedTime + 2000) {
+            mBackKeyPressedTime = System.currentTimeMillis();
+            mToast = Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+            mToast.show();
+        }
+        else if(System.currentTimeMillis() <= mBackKeyPressedTime + 2000) {
+
+            finish();
+            mToast.cancel();
+        }
 
     }
 

@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".main.MainActivity" />
+        <activity android:name=".main.SpecificBoardActivity" />
     </application>
 
 </manifest>

@@ -13,6 +13,9 @@ import com.example.practicemediaproject.main.MainActivity;
 
 public class SignInActivity extends AppCompatActivity {
 
+    private long mBackKeyPressedTime = 0;
+    private Toast mToast;
+
     private EditText et_sign_in_id;
     private EditText et_sign_in_pw;
     private Button btn_sign_in_sign_in;
@@ -72,6 +75,22 @@ public class SignInActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(System.currentTimeMillis() > mBackKeyPressedTime + 2000) {
+            mBackKeyPressedTime = System.currentTimeMillis();
+            mToast = Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+            mToast.show();
+        }
+        else if(System.currentTimeMillis() <= mBackKeyPressedTime + 2000) {
+
+            finish();
+            mToast.cancel();
+        }
+
     }
 
 }

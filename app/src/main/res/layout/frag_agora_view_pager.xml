@@ -10,7 +10,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/lighter_grey"
+        android:background="@color/more_lighter_grey"
         app:tabIndicatorColor="@color/blue_app_name"
         app:layout_constraintBottom_toTopOf="@+id/constraint_layout_frag_board"
         app:layout_constraintEnd_toEndOf="parent"
