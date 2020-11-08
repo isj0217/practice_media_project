@@ -55,7 +55,7 @@ public class WritingActivity extends AppCompatActivity {
         et_writing_title = findViewById(R.id.et_writing_title);
         et_writing_content = findViewById(R.id.et_writing_content);
         btn_writing_attach_photo = findViewById(R.id.btn_writing_attach_photo);
-        chk_writing_anonymous = findViewById(R.id.chk_writing_anonymous);
+//        chk_writing_anonymous = findViewById(R.id.chk_writing_anonymous);
     }
 
     public void loadRecentSectionAndCategory() {
