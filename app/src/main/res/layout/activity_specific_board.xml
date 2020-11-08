@@ -28,11 +28,11 @@
             android:src="@drawable/left_arrow_blue" />
 
         <TextView
-            android:id="@+id/tv_specific_board_department_name"
+            android:id="@+id/tv_specific_board_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="ㅇㅇ학과"
+            android:text="ㅇㅇ게시판"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -58,7 +58,7 @@
             android:src="@drawable/search_glass_blue" />
 
         <ImageView
-            android:id="@+id/iv_specific_board_more"
+            android:id="@+id/iv_specific_board_write"
             android:onClick="customOnClick"
             android:layout_width="27dp"
             android:layout_height="27dp"

@@ -1,6 +1,8 @@
 package com.example.practicemediaproject.main.fragments.fragment_agora.view_pager_in_frag_agora.frag_agora_department;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +31,6 @@ public class FragAgoraDepartment extends Fragment {
     LinearLayout ll_agora_department_cyber_security;
     LinearLayout ll_agora_department_electronic_engineering;
     LinearLayout ll_agora_department_military_digital_convergence;
-
 
     private boolean favorite_media, favorite_software, favorite_cyber_security, favorite_electronic_engineering, favorite_military_digital_convergence;
     private ImageView iv_agora_department_favorite_media,
@@ -160,8 +161,8 @@ public class FragAgoraDepartment extends Fragment {
         ll_agora_department_media.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveRecentSectionAndCategory("department", "미디어학과");
                 Intent intent = new Intent(view.getContext(), SpecificBoardActivity.class);
-                intent.putExtra("department_name", "미디어학과");
                 startActivity(intent);
             }
         });
@@ -170,8 +171,8 @@ public class FragAgoraDepartment extends Fragment {
         ll_agora_department_software.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveRecentSectionAndCategory("department", "소프트웨어학과");
                 Intent intent = new Intent(view.getContext(), SpecificBoardActivity.class);
-                intent.putExtra("department_name", "소프트웨어학과");
                 startActivity(intent);
             }
         });
@@ -180,8 +181,8 @@ public class FragAgoraDepartment extends Fragment {
         ll_agora_department_cyber_security.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveRecentSectionAndCategory("department", "사이버보안학과");
                 Intent intent = new Intent(view.getContext(), SpecificBoardActivity.class);
-                intent.putExtra("department_name", "사이버보안학과");
                 startActivity(intent);
             }
         });
@@ -190,8 +191,8 @@ public class FragAgoraDepartment extends Fragment {
         ll_agora_department_electronic_engineering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveRecentSectionAndCategory("department", "전자공학과");
                 Intent intent = new Intent(view.getContext(), SpecificBoardActivity.class);
-                intent.putExtra("department_name", "전자공학과");
                 startActivity(intent);
             }
         });
@@ -200,11 +201,20 @@ public class FragAgoraDepartment extends Fragment {
         ll_agora_department_military_digital_convergence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveRecentSectionAndCategory("department", "국방디지털융합학과");
                 Intent intent = new Intent(view.getContext(), SpecificBoardActivity.class);
-                intent.putExtra("department_name", "국방디지털융합학과");
                 startActivity(intent);
             }
         });
+    }
+
+    public void saveRecentSectionAndCategory(String section_in_agora, String category_name){
+        Context context = getContext();
+        SharedPreferences sharedPreferences = context.getSharedPreferences("recent_section_and_category", context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("section_in_agora", section_in_agora);
+        editor.putString("category_name", category_name);
+        editor.apply();
     }
 
 
