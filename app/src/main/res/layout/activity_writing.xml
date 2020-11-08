@@ -109,21 +109,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
-        <CheckBox
-            android:id="@+id/chk_writing_anonymous"
-            android:checked="true"
-            android:buttonTint="@color/blue_app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="익명"
-            android:textStyle="bold"
-            android:textColor="@color/blue_app_name"
-            android:textSize="12sp" />
+<!--        <CheckBox-->
+<!--            android:id="@+id/chk_writing_anonymous"-->
+<!--            android:checked="true"-->
+<!--            android:buttonTint="@color/blue_app_name"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scaleX="0.7"-->
+<!--            android:scaleY="0.7"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="익명"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/blue_app_name"-->
+<!--            android:textSize="12sp" />-->
 
     </LinearLayout>
 

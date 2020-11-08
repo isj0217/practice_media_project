@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:maxLength="20"
                 android:text="표시될 게시글의 제목"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -37,6 +38,7 @@
                 android:layout_marginTop="2dp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:maxLength="20"
                 android:text="표시될 게시글의 내용"
                 android:textColor="@color/grey"
                 android:textSize="12sp" />
