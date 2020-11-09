@@ -2,6 +2,7 @@ package com.example.practicemediaproject.sign_up;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,52 +20,52 @@ import com.example.practicemediaproject.sign_in.SignInActivity;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText et_sign_up_id;
-    private EditText et_sign_up_pw;
-    private EditText et_sign_up_pw_again;
+//    private EditText et_sign_up_id;
+//    private EditText et_sign_up_pw;
+//    private EditText et_sign_up_pw_again;
     private EditText et_sign_up_nickname;
-    private EditText et_sign_up_email;
+//    private EditText et_sign_up_email;
     private EditText et_sign_up_department;
     private EditText et_sign_up_student_id;
     private Button btn_sign_up_sign_up;
 
-    private ImageView iv_sign_up_check_id;
-    private ImageView iv_sign_up_check_pw;
-    private ImageView iv_sign_up_check_pw_again;
+//    private ImageView iv_sign_up_check_id;
+//    private ImageView iv_sign_up_check_pw;
+//    private ImageView iv_sign_up_check_pw_again;
     private ImageView iv_sign_up_check_nickname;
-    private ImageView iv_sign_up_check_email;
+//    private ImageView iv_sign_up_check_email;
     private ImageView iv_sign_up_check_department;
     private ImageView iv_sign_up_check_student_id;
 
-    private boolean is_suitable_id;
-    private boolean is_suitable_pw;
-    private boolean is_suitable_pw_again;
+//    private boolean is_suitable_id;
+//    private boolean is_suitable_pw;
+//    private boolean is_suitable_pw_again;
     private boolean is_suitable_nickname;
-    private boolean is_suitable_email;
+//    private boolean is_suitable_email;
     private boolean is_suitable_department;
     private boolean is_suitable_student_id;
 
     private Intent intent;
 
-    private String email_pattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    private String email_pattern_2 = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+\\.+[a-z]+";
+//    private String email_pattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+//    private String email_pattern_2 = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+\\.+[a-z]+";
 
     public void bindViews() {
-        et_sign_up_id = findViewById(R.id.et_sign_up_id);
-        et_sign_up_pw = findViewById(R.id.et_sign_up_pw);
-        et_sign_up_pw_again = findViewById(R.id.et_sign_up_pw_again);
+//        et_sign_up_id = findViewById(R.id.et_sign_up_id);
+//        et_sign_up_pw = findViewById(R.id.et_sign_up_pw);
+//        et_sign_up_pw_again = findViewById(R.id.et_sign_up_pw_again);
         et_sign_up_nickname = findViewById(R.id.et_sign_up_nickname);
-        et_sign_up_email = findViewById(R.id.et_sign_up_email);
+//        et_sign_up_email = findViewById(R.id.et_sign_up_email);
         et_sign_up_department = findViewById(R.id.et_sign_up_department);
         et_sign_up_student_id = findViewById(R.id.et_sign_up_student_id);
 
         btn_sign_up_sign_up = findViewById(R.id.btn_sign_up_sign_up);
 
-        iv_sign_up_check_id = findViewById(R.id.iv_sign_up_check_id);
-        iv_sign_up_check_pw = findViewById(R.id.iv_sign_up_check_pw);
-        iv_sign_up_check_pw_again = findViewById(R.id.iv_sign_up_check_pw_again);
+//        iv_sign_up_check_id = findViewById(R.id.iv_sign_up_check_id);
+//        iv_sign_up_check_pw = findViewById(R.id.iv_sign_up_check_pw);
+//        iv_sign_up_check_pw_again = findViewById(R.id.iv_sign_up_check_pw_again);
         iv_sign_up_check_nickname = findViewById(R.id.iv_sign_up_check_nickname);
-        iv_sign_up_check_email = findViewById(R.id.iv_sign_up_check_email);
+//        iv_sign_up_check_email = findViewById(R.id.iv_sign_up_check_email);
         iv_sign_up_check_department = findViewById(R.id.iv_sign_up_check_department);
         iv_sign_up_check_student_id = findViewById(R.id.iv_sign_up_check_student_id);
     }
@@ -79,68 +80,68 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void setTextChangedListeners() {
-        et_sign_up_id.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() >= 4 && editable.length() <= 20) {
-                    iv_sign_up_check_id.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
-                    is_suitable_id = true;
-                } else {
-                    iv_sign_up_check_id.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
-                    is_suitable_id = false;
-                }
-            }
-        });
-
-        et_sign_up_pw.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() >= 4 && editable.length() <= 20) {
-                    iv_sign_up_check_pw.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
-                    is_suitable_pw = true;
-                } else {
-                    iv_sign_up_check_pw.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
-                    is_suitable_pw = false;
-                }
-            }
-        });
-
-        et_sign_up_pw_again.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() >= 4 && editable.length() <= 20 && editable.toString().equals(et_sign_up_pw.getText().toString())) {
-                    iv_sign_up_check_pw_again.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
-                    is_suitable_pw_again = true;
-                } else {
-                    iv_sign_up_check_pw_again.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
-                    is_suitable_pw_again = false;
-                }
-            }
-        });
+//        et_sign_up_id.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//                if (editable.length() >= 4 && editable.length() <= 20) {
+//                    iv_sign_up_check_id.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
+//                    is_suitable_id = true;
+//                } else {
+//                    iv_sign_up_check_id.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
+//                    is_suitable_id = false;
+//                }
+//            }
+//        });
+//
+//        et_sign_up_pw.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//                if (editable.length() >= 4 && editable.length() <= 20) {
+//                    iv_sign_up_check_pw.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
+//                    is_suitable_pw = true;
+//                } else {
+//                    iv_sign_up_check_pw.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
+//                    is_suitable_pw = false;
+//                }
+//            }
+//        });
+//
+//        et_sign_up_pw_again.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//                if (editable.length() >= 4 && editable.length() <= 20 && editable.toString().equals(et_sign_up_pw.getText().toString())) {
+//                    iv_sign_up_check_pw_again.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
+//                    is_suitable_pw_again = true;
+//                } else {
+//                    iv_sign_up_check_pw_again.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
+//                    is_suitable_pw_again = false;
+//                }
+//            }
+//        });
 
         et_sign_up_nickname.addTextChangedListener(new TextWatcher() {
             @Override
@@ -163,26 +164,26 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        et_sign_up_email.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if ((editable.toString().matches(email_pattern) || editable.toString().matches(email_pattern_2)) && editable.length() > 0) {
-                    iv_sign_up_check_email.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
-                    is_suitable_email = true;
-                } else {
-                    iv_sign_up_check_email.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
-                    is_suitable_email = false;
-                }
-            }
-        });
+//        et_sign_up_email.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//                if ((editable.toString().matches(email_pattern) || editable.toString().matches(email_pattern_2)) && editable.length() > 0) {
+//                    iv_sign_up_check_email.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_green);
+//                    is_suitable_email = true;
+//                } else {
+//                    iv_sign_up_check_email.setImageResource(R.drawable.ic_baseline_check_circle_outline_24_red);
+//                    is_suitable_email = false;
+//                }
+//            }
+//        });
 
         et_sign_up_department.addTextChangedListener(new TextWatcher() {
             @Override
@@ -225,7 +226,6 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void customOnClick(View view) {
@@ -238,11 +238,12 @@ public class SignUpActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_sign_up_sign_up:
-                if (is_suitable_id &&
-                        is_suitable_pw &&
-                        is_suitable_pw_again &&
-                        is_suitable_department &&
-                        is_suitable_email &&
+
+                SharedPreferences sharedPreferences = getSharedPreferences("naverAccessToken", MODE_PRIVATE);
+                String at = sharedPreferences.getString("naverAccessToken", "Error Occurred");
+                System.out.println("at= " + at);
+
+                if (is_suitable_department &&
                         is_suitable_department &&
                         is_suitable_student_id) {
                     // todo before server connection

@@ -2,6 +2,7 @@ package com.example.practicemediaproject.sign_in;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,8 +20,8 @@ import com.nhn.android.naverlogin.ui.view.OAuthLoginButton;
 
 public class SignInActivity extends AppCompatActivity {
 
-    private static String OAUTH_CLIENT_ID = "8lnvsFOfLFuX7UtIYe_s";
-    private static String OAUTH_CLIENT_SECRET = "QSFVkxOTFQ";
+    private static String OAUTH_CLIENT_ID = "tmRiOHk1L6UG_iO2Io_B";
+    private static String OAUTH_CLIENT_SECRET = "h722klNl_l";
     private static String OAUTH_CLIENT_NAME = "아고라";
 
     public static OAuthLoginButton mOAthLoginButton;
@@ -117,7 +118,15 @@ public class SignInActivity extends AppCompatActivity {
                 long expriresAt = mOAthLoginInstance.getExpiresAt(mContext);
                 String tokenType = mOAthLoginInstance.getTokenType(mContext);
 
-                redirectToMainActivity();
+                // todo
+                // 회원가입이 되어있는 사람인지 확인해서,
+                // 가입이 되어있지 않다면 회원가입 액티비티로 보내고, 가입이 되어있다면 메인 액티비티로 보낸다.
+
+                saveAccessTokenToSharedPreferences(accessToken);
+
+                System.out.println(accessToken);
+
+                redirectToNextActivity(checkAlreadyMember());
 
             } else {
                 String errorCode = mOAthLoginInstance.getLastErrorCode(mContext).getCode();
@@ -127,10 +136,32 @@ public class SignInActivity extends AppCompatActivity {
         }
     };
 
-    protected void redirectToMainActivity() {
-        final Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+    public boolean checkAlreadyMember(){
+        //우리 DB에 가입되어있는지 여부 확인
+        return false;
+    }
+
+    public void saveAccessTokenToSharedPreferences(String token){
+        SharedPreferences sharedPreferences = getSharedPreferences("naverAccessToken", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("naverAccessToken", token);
+        editor.apply();
+    }
+
+    protected void redirectToNextActivity(boolean isMember) {
+
+        if (isMember) {
+            // todo
+            // 회원이므로 해당 회원의 정보 받아옴
+
+            final Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            final Intent intent = new Intent(this, SignUpActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
 
