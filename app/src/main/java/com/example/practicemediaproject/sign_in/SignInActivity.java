@@ -125,6 +125,7 @@ public class SignInActivity extends AppCompatActivity {
                 saveAccessTokenToSharedPreferences(accessToken);
 
                 System.out.println(accessToken);
+                System.out.println(expriresAt);
 
                 redirectToNextActivity(checkAlreadyMember());
 
@@ -138,7 +139,7 @@ public class SignInActivity extends AppCompatActivity {
 
     public boolean checkAlreadyMember(){
         //우리 DB에 가입되어있는지 여부 확인
-        return false;
+        return true;
     }
 
     public void saveAccessTokenToSharedPreferences(String token){
